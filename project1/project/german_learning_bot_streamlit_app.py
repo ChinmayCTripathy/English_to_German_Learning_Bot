@@ -13,10 +13,10 @@ st.set_page_config(
 )
 
 # Configure APIs (replace with your keys or env vars)
-genai.configure(api_key="")
+genai.configure(api_key="AIzaSyAEMdPW9tQBFbv_sGC3bW9UGPs-nTWKZdY")
 
 client = ElevenLabs(
-    api_key=""
+    api_key="sk_1934b00ac75f96462ef976f3d1cdfbf317e5c476f4a7e210"
 )
 
 
