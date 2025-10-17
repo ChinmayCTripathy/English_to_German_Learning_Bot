@@ -1,0 +1,29 @@
+@"
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Env & secrets
+.env
+*.env
+.streamlit/secrets.toml
+
+# Local virtual envs
+project1/Include/
+project1/Lib/
+project1/Scripts/
+project1/pyvenv.cfg
+project1/project/Include/
+project1/project/Lib/
+project1/project/Scripts/
+project1/project/pyvenv.cfg
+"@ | Set-Content .gitignore
