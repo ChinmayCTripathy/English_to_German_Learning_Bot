@@ -70,13 +70,17 @@ class GermanLearningBotWeb:
 
     def speak_german(self, text):
         try:
-            audio = client.text_to_speech.convert(
+            audio_stream = client.text_to_speech.convert(
                 text=text,
                 voice_id=self.german_voice_id,
                 model_id="eleven_multilingual_v2",
                 output_format="mp3_44100_128",
             )
-            audio_base64 = base64.b64encode(audio).decode()
+
+            # Collect generator output into bytes
+            audio_bytes = b"".join(audio_stream)
+
+            audio_base64 = base64.b64encode(audio_bytes).decode()
             audio_html = f"""
             <audio autoplay controls style="width: 100%;">
                 <source src="data:audio/mp3;base64,{audio_base64}" type="audio/mp3">
@@ -87,6 +91,7 @@ class GermanLearningBotWeb:
         except Exception as e:
             st.error(f"❌ Audio error: {e}")
             return None
+
 
     def display_progress_sidebar(self):
         with st.sidebar:
