@@ -22,7 +22,7 @@ client = ElevenLabs(
 
 class GermanLearningBotWeb:
     def __init__(self):
-        self.model = genai.GenerativeModel("gemini-1.5-flash")
+        self.model = genai.GenerativeModel(model_name="gemini-1.5-flash-latest")
         # German ElevenLabs voice id
         self.german_voice_id = "nzeAacJi50IvxcyDnMXa"
 
