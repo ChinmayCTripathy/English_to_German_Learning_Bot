@@ -1,23 +1,22 @@
-@"
-# Python
+# Python caches
 __pycache__/
 *.py[cod]
 *.egg-info/
 .pytest_cache/
 .ipynb_checkpoints/
 
-# OS / editor
-.DS_Store
-Thumbs.db
+# Editors/OS
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
 
 # Env & secrets
 .env
 *.env
 .streamlit/secrets.toml
 
-# Local virtual envs
+# Local virtual envs (keep code tracked)
 project1/Include/
 project1/Lib/
 project1/Scripts/
@@ -26,4 +25,5 @@ project1/project/Include/
 project1/project/Lib/
 project1/project/Scripts/
 project1/project/pyvenv.cfg
-"@ | Set-Content .gitignore
+
+# DO NOT add: project1/ or project1/project/
